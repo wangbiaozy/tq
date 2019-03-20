@@ -114,7 +114,7 @@ function showCover() {
     $('.share_hide').on('click', function () {
         hiddenCover()
         $('.share').hide();
-        // 点击蒙版以后已分享 测试用
+        // 点击蒙版以后已分享
         share_status = true;
     })
 
