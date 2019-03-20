@@ -400,7 +400,7 @@ $(document).on('click','.share_hide',function(){
                             }else{
                                 showCover();
                                 $('.d_unclaimed').css('background', 'url(images/lhd_02.png) no-repeat');
-                                $('.pop_yio').show();
+                                $('.pop_yio').show()
                             }
                             // $('.d_unclaimed').css('background', 'url(images/lhd_02.png) no-repeat')
                             // $(this).text('点击查看')
