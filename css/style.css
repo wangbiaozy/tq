@@ -11,6 +11,38 @@ body {
 .hide {
   display: none !important;
 }
+section.loader {
+  font-size: 14px;
+}
+section.loader > div {
+  padding-top: 50%;
+}
+section.loader > div:nth-child(1) {
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 2em;
+  text-align: center;
+  font-style: italic;
+  color: #00733d;
+}
+section.loader > div:nth-child(2) {
+  box-sizing: border-box;
+  padding: 2px;
+  margin: 0 auto;
+  width: 15em;
+  height: .5em;
+  background-color: #dbf3d2;
+  border-radius: .4em;
+}
+section.loader > div:nth-child(2) div {
+  width: 30%;
+  height: .24em;
+  border-radius: .4em;
+  background-color: #00733d;
+}
+.page {
+  display: none;
+}
 .page > div:nth-child(1) {
   width: 7.5rem;
   height: 4.45rem;
@@ -185,17 +217,18 @@ body {
   background-size: cover !important;
 }
 .main_content > div:nth-child(4) {
+  position: relative;
+  height: .77rem;
   margin: .4rem auto;
 }
 .main_content > div:nth-child(4) > span {
-  display: inline-block;
+  position: absolute;
   width: 1.07rem;
   height: .79rem;
   background: url(../images/main_01.png) no-repeat;
   background-size: cover;
-  position: fixed;
   left: .58rem;
-  top: 8.3rem;
+  top: .7rem;
 }
 .main_content > div:nth-child(4) > div {
   width: 2.52rem;
