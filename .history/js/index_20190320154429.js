@@ -108,7 +108,7 @@ function showCover() {
     $('.cover').css('height', $(document).height());
     $('.cover').css('width', $(document).width());
     $('.cover').show();
-    $('html,body').css({ 'position': 'fixed', 'top': 0, "background-color": 'rgba(0,0,0,.8)'});
+    $(html,body).css({ 'position': 'fixed', 'top': 0, "background-color": 'rgba(0,0,0,.8)'});
 }
 // 点击分享遮罩层
 $(document).on('click','.share_hide',function(){
@@ -424,7 +424,7 @@ $(document).on('click','.share_hide',function(){
         // 隐藏遮罩
         function hiddenCover() {
             $('.cover').hide();
-            $('html,body').css('position', 'unset');
+            $('body').css('position', 'unset');
         }
         if (getstory_select.length == 9) {
             $('.page').addClass('hide') // 首页隐藏

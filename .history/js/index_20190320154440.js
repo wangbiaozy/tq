@@ -424,7 +424,7 @@ $(document).on('click','.share_hide',function(){
         // 隐藏遮罩
         function hiddenCover() {
             $('.cover').hide();
-            $('html,body').css('position', 'unset');
+            $('body').css('position', 'unset');
         }
         if (getstory_select.length == 9) {
             $('.page').addClass('hide') // 首页隐藏
