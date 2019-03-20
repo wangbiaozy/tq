@@ -19,7 +19,7 @@ $(document).ready(function () {
     var count_true = 0
     var attention = true //判断用户是否关注
     var status = true // 判断此用户是否绑定手机号
-    var share_status = true // 判断是否已经分享
+    var share_status = false // 判断是否已经分享
     var zhuanzeng = true //是否将流量转增
     var dianji  = ''
     var show_card_tip = {
@@ -111,9 +111,14 @@ function showCover() {
     $('html,body').css('position','fixed');
 }
 // 点击分享遮罩层
-$(document).on('click','.share_hide',function(){
+$('.share_hide').on('click',function(){
     hiddenCover()
     $('.share').hide();
+    setTimeout(function(){
+        share_status = true;
+        localStorage.removeItem('selected_arr')
+        window.location.href="index.html?time="+((new Date()).getTime());
+    },100)
 })
 
 
@@ -252,10 +257,14 @@ $(document).on('click','.share_hide',function(){
             $('.pop_yit').show()
         })
 
-        // 
+        // 点击异网2
         $('.pop_yit .close').on('click',function(){
-            $('.pop_yit').hide()
-            $('.pop_yith').show()
+            if(istel($('#inputTel').val())){
+                $('.pop_yit').hide()
+                $('.pop_yith').show()
+            }else{
+                alert("请输入正确的北京移动号码")
+            }
         })
 
         // 点击异网弹窗3更改
@@ -313,10 +322,10 @@ $(document).on('click','.share_hide',function(){
         })
         
         // 立即分享
-        $('.li_share').on('click',function(){
-            share_status = false
-            $(this).attr('disabled',true).text('未分享')
-        })
+        // $('.li_share').on('click',function(){
+        //     share_status = false
+        //     $(this).attr('disabled',true).text('未分享')
+        // })
 
         $('.post_cards').on('click',function(){
             hiddenCover()
@@ -393,14 +402,14 @@ $(document).on('click','.share_hide',function(){
                         } else {
                             var select_val = $('.select_wang').val()// 获取本网还是异网
                             if( select_val == 0){
-                                $('.d_unclaimed').css('background', 'url(images/lhd_02.png) no-repeat');
+                                $('.d_unclaimed').css('background', 'url(images/lhd_02.png) no-repeat')
                                 showCover();
                                 $(this).text('点击查看')
                                 $('.pop_benw').show();
                             }else{
                                 showCover();
-                                $('.d_unclaimed').css('background', 'url(images/lhd_02.png) no-repeat');
-                                $('.pop_yio').show();
+                                $('.d_unclaimed').css('background', 'url(images/lhd_02.png) no-repeat')
+                                $('.pop_yio').show()
                             }
                             // $('.d_unclaimed').css('background', 'url(images/lhd_02.png) no-repeat')
                             // $(this).text('点击查看')
@@ -440,5 +449,15 @@ $(document).on('click','.share_hide',function(){
 
             })
         }
+     //移动手机号码验证
+    function istel(tel) {
+        var rtn = false;
+        //移动号段验证
+        var regtel = /^((13[4-9])|(15([0-2]|[7-9]))|(18[2|3|4|7|8])|(178)|(147))[\d]{8}$/;
+        if (regtel.test(tel)) {
+            rtn = true;
+        }
+        return rtn;
+    }
 });
         
