@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+    <title>踏青</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <!-- <script src="js/less-1.7.0.min.js"></script> -->
+    <!-- <script src="js/index1.js"></script> -->
+    <script src="js/swiper.min.js"></script>
+    <script src="js/index.js"></script>
+    <body>
+        <!-- 测试 -->
+        <div style="position:absolute;z-index: 999999;color:red;    display: flex;
+        flex-direction:column;">
+           
+            <button class="ljgz" style="font-size:16px">已关注</button>
+            <button class="jb_mobile" style="font-size:16px">已绑定</button>
+            <button class="li_share" style="font-size:16px">已分享</button>
+            <button class="qing" style="font-size:16px">清缓存</button>
+            <select class="select_wang" style="font-size:16px;">
+                <option value="0">本网</option>
+                <option value="1">异网</option>
+            </select>
+        </div>
+        <!--首页  -->
+
+        <section class="page" id='begin'>
+            <div>
+                <a href="javascript:void(0);" class="rule"></a>
+            </div>
+            <div class="page_two">
+                <div>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div>
+                    <a href="javascript:void(0);" class="start_game"></a>
+                </div>
+                <div></div>
+            </div>
+
+        </section>
+        <!-- 共同背景(主页、绑定手机号) -->
+        <section class="main ti_bg">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <!-- 叶子两边 -->
+            <div class="leaf ">
+                <div></div>
+                <div></div>
+            </div>
+        </section>
+        <!--主页内容  -->
+        <div class="main_content">
+            <div>
+                <a href="javascript:void(0);" class="rule"></a>
+            </div>
+            <div>
+                <img src="./images/main_02.png" alt="">
+                <p class="right_question">恭喜您本次答对了
+                    <span> XX</span>道题
+                    <br>当前已解锁
+                    <span>XX</span>地标 点击地标可查看神秘档案
+                </p>
+                <img src="./images/main_02.png" alt="">
+            </div>
+            <div>
+                <ul class="show_card">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div>
+                <span></span>
+                <!-- 重新答题 -->
+                <div class="again"></div>
+            </div>
+            <!-- 礼盒 -->
+            <div class="lihe">
+                <div>
+                    <div class="x_unclaimed"></div>
+                    <div class="receive_left">点击领取</div>
+                    <p>答对6~8题</p>
+                </div>
+                <div>
+                    <div class="d_unclaimed"></div>
+                    <div class="receive_right">点击领取</div>
+                    <p>答对9题</p>
+                </div>
+            </div>
+        </div>
+        <!-- 绑定手机号内容 -->
+        <div class="bind">
+            <div>
+                <span></span>
+            </div>
+            <div>
+                <p>尊敬的用户，您还没有绑定手机号码哦！
+                    <br/> 快来在下方完成您的绑定吧～
+                </p>
+                <div>
+                    <div>
+                        <label for="">手机号码：</label>
+                        <input type="text" maxlength="11">
+                    </div>
+                    <div>
+                        <label for="">验证码：</label>
+                        <input type="text">
+                        <span>获取验证码</span>
+                    </div>
+
+                </div>
+                <!-- 提交 -->
+                <div class="submit_form"></div>
+                <a href="javascript:void(0);">关联说明服务</a>
+            </div>
+        </div>
+        <!-- 九道题 -->
+        <div class="topic">
+            <div>
+                <div>
+                    <div>
+                        <img src="./images/ti_jin_ren.png" alt="" class="small_people">
+                    </div>
+                    <ul class="progress_bar">
+                        <li>
+                            <span></span>
+                            <!-- <p>
+                                <span></span>
+                                <span class="jindut_color"></span>
+                            </p> -->
+                        </li>
+                        <li>
+                            <span></span>
+                        </li>
+                        <li>
+                            <span></span>
+                        </li>
+                        <li>
+                            <span></span>
+                        </li>
+                        <li>
+                            <span></span>
+
+                        </li>
+                        <li>
+                            <span></span>
+
+                        </li>
+                        <li>
+                            <span></span>
+                        </li>
+                        <li>
+                            <span></span>
+                        </li>
+                        <li>
+                            <span></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper" style="width:6.2rem !important">
+                        <!-- 第一道题 -->
+                        <div class="swiper-slide  swiper-no-swiping topic_content">
+                            <div></div>
+                            <!-- 图片区域 -->
+                            <div class="show_img">
+                                <div>
+                                    <img src="./images/ti_01_01.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 选题 -->
+                            <div class="topic_list list_1">
+                                <div>
+                                    <span>A&nbsp;.&nbsp;孔庙</span>
+                                    <span></span>
+                                </div>
+                                <div>
+                                    <span>B&nbsp;.&nbsp;故宫</span>
+                                    <span></span>
+                                </div>
+                                <div>
+                                    <span>C&nbsp;.&nbsp;颐和园</span>
+                                    <span></span>
+                                </div>
+                                <input type="hidden" value="B">
+                            </div>
+                        </div>
+                        <!-- 第二道题 -->
+                        <div class="swiper-slide  swiper-no-swiping topic_content">
+                            <div></div>
+                            <!-- 图片区域 -->
+                            <div class="show_img">
+                                <div>
+                                    <img src="./images/ti_02_01.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 选题 -->
+                            <div class="topic_list list_2">
+                                <div>
+                                    <span>A&nbsp;.&nbsp;天安门</span>
+                                    <span></span>
+                                </div>
+                                <div>
+                                    <span>B&nbsp;.&nbsp;历史博物馆</span>
+                                    <span></span>
+                                </div>
+                                <div readonly>
+                                    <span>C&nbsp;.&nbsp;东岳庙</span>
+                                    <span></span>
+                                </div>
+                                <input type="hidden" value="A">
+                            </div>
+                        </div>
+                        <!-- 第三道题 -->
+                        <div class="swiper-slide  swiper-no-swiping topic_content">
+                            <div></div>
+                            <!-- 图片区域 -->
+                            <div class="show_img">
+                                <div>
+                                    <img src="./images/ti_03_01.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 选题 -->
+                            <div class="topic_list list_3">
+                                <div>
+                                    <span>A&nbsp;.&nbsp;北海</span>
+                                    <span></span>
+                                </div>
+                                <div>
+                                    <span>B&nbsp;.&nbsp;潭拓寺</span>
+                                    <span></span>
+                                </div>
+                                <div readonly>
+                                    <span>C&nbsp;.&nbsp;红螺寺</span>
+                                    <span></span>
+                                </div>
+                                <input type="hidden" value="A">
+                            </div>
+                        </div>
+                        <!-- 第四道题 -->
+                        <div class="swiper-slide  swiper-no-swiping topic_content">
+                            <div></div>
+                            <!-- 图片区域 -->
+                            <div class="show_img">
+                                <div>
+                                    <img src="./images/ti_04_01.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 选题 -->
+                            <div class="topic_list list_4">
+                                <div>
+                                    <span>A&nbsp;.&nbsp;十渡</span>
+                                    <span></span>
+                                </div>
+                                <div>
+                                    <span>B&nbsp;.&nbsp;张家界</span>
+                                    <span></span>
+                                </div>
+                                <div readonly>
+                                    <span>C&nbsp;.&nbsp;长城</span>
+                                    <span></span>
+                                </div>
+                                <input type="hidden" value="C">
+                            </div>
+                        </div>
+                        <!-- 第五道题 -->
+                        <div class="swiper-slide  swiper-no-swiping topic_content">
+                            <div></div>
+                            <!-- 图片区域 -->
+                            <div class="show_img">
+                                <div>
+                                    <img src="./images/ti_05_01.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 选题 -->
+                            <div class="topic_list list_5">
+                                <div>
+                                    <span>A&nbsp;.&nbsp;日坛</span>
+                                    <span></span>
+                                </div>
+                                <div>
+                                    <span>B&nbsp;.&nbsp;八大处</span>
+                                    <span></span>
+                                </div>
+                                <div readonly>
+                                    <span>C&nbsp;.&nbsp;天坛</span>
+                                    <span></span>
+                                </div>
+                                <input type="hidden" value="C">
+                            </div>
+                        </div>
+                        <!-- 第六道题 -->
+                        <div class="swiper-slide  swiper-no-swiping topic_content">
+                            <div></div>
+                            <!-- 图片区域 -->
+                            <div class="show_img">
+                                <div>
+                                    <img src="./images/ti_06_01.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 选题 -->
+                            <div class="topic_list list_6">
+                                <div>
+                                    <span>A&nbsp;.&nbsp;香山</span>
+                                    <span></span>
+                                </div>
+                                <div>
+                                    <span>B&nbsp;.&nbsp;古水北镇</span>
+                                    <span></span>
+                                </div>
+                                <div readonly>
+                                    <span>C&nbsp;.&nbsp;玉渊潭</span>
+                                    <span></span>
+                                </div>
+                                <input type="hidden" value="A">
+                            </div>
+                        </div>
+                        <!-- 第七道题 -->
+                        <div class="swiper-slide  swiper-no-swiping topic_content">
+                            <div></div>
+                            <!-- 图片区域 -->
+                            <div class="show_img">
+                                <div>
+                                    <img src="./images/ti_07_01.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 选题 -->
+                            <div class="topic_list list_7">
+                                <div>
+                                    <span>A&nbsp;.&nbsp;赵州桥</span>
+                                    <span></span>
+                                </div>
+                                <div>
+                                    <span>B&nbsp;.&nbsp;卢沟桥</span>
+                                    <span></span>
+                                </div>
+                                <div readonly>
+                                    <span>C&nbsp;.&nbsp;银锭桥</span>
+                                    <span></span>
+                                </div>
+                                <input type="hidden" value="B">
+                            </div>
+                        </div>
+                        <!-- 第八道题 -->
+                        <div class="swiper-slide  swiper-no-swiping topic_content">
+                            <div></div>
+                            <!-- 图片区域 -->
+                            <div class="show_img">
+                                <div>
+                                    <img src="./images/ti_08_01.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 选题 -->
+                            <div class="topic_list list_8">
+                                <div>
+                                    <span>A&nbsp;.&nbsp;清华园</span>
+                                    <span></span>
+                                </div>
+                                <div>
+                                    <span>B&nbsp;.&nbsp;颐和园</span>
+                                    <span></span>
+                                </div>
+                                <div readonly>
+                                    <span>C&nbsp;.&nbsp;圆明园</span>
+                                    <span></span>
+                                </div>
+                                <input type="hidden" value="A">
+                            </div>
+                        </div>
+                        <!-- 第九道题 -->
+                        <div class="swiper-slide  swiper-no-swiping topic_content">
+                            <div></div>
+                            <!-- 图片区域 -->
+                            <div class="show_img">
+                                <div>
+                                    <img src="./images/ti_09_01.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 选题 -->
+                            <div class="topic_list list_9">
+                                <div>
+                                    <span>A&nbsp;.&nbsp;陶然亭</span>
+                                    <span></span>
+                                </div>
+                                <div>
+                                    <span>B&nbsp;.&nbsp;朝阳公园</span>
+                                    <span></span>
+                                </div>
+                                <div readonly>
+                                    <span>C&nbsp;.&nbsp;圆明园</span>
+                                    <span></span>
+                                </div>
+                                <input type="hidden" value="C">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="javascript:void(0);"></a>
+            </div>
+        </div>
+        <!-- 提示 -->
+        <section class="pop pop_att">
+            <div>
+                <p>这是哪里</p>
+                <div>
+                    <p>提示：</p>
+                    <ul>
+                        <li>1.国家宝藏</li>
+                        <li>2.延禧宫</li>
+                        <li>3.御花园</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="close guessed">猜到了</div>
+        </section>
+        <!-- 本网弹窗 -->
+        <section class="pop pop_benw">
+            <div>
+                <div>
+                    <p>恭喜您的号码
+                        <br>
+                        <span>15910943650</span>
+                    </p>
+                    <p> 获得
+                        <span>500MB</span> 全国流量 </p>
+                    <p>流量将于15日内到账
+                        <br> 有效期：7天
+                        <br> （流量到账后，立即生效）</p>
+                </div>
+                <a href="javascript:void(0);"></a>
+            </div>
+            <div class="close">确定</div>
+        </section>
+        <!-- 异网弹窗1 -->
+        <section class="pop  pop_yio">
+            <div>
+                <p>恭喜您的号码
+                    <br>
+                    <span>15910943650</span>
+                </p>
+                <p> 获得
+                    <span>500MB</span> 全国流量
+                    <br> 您可以转赠到北京移动号码内
+                </p>
+                <p> （流量仅可在活动期间进行转赠）</p>
+            </div>
+            <div>
+                <span>取消</span>
+                <span>转增</span>
+            </div>
+        </section>
+        <!-- 异网弹窗2 -->
+        <section class="pop pop_yit">
+            <div>
+                <p>请输入好友北京移动手机号码</p>
+                <div>
+                    <label for="">手机号码</label>
+                    <input type="text" maxlength="11">
+                </div>
+                <p>（流量仅可在活动期间进行转赠）</p>
+            </div>
+            <div class="close">确定</div>
+        </section>
+        <!-- 异网弹窗3 -->
+        <section class="pop  pop_yith">
+            <div>
+                <p>信息确认</p>
+                <p> 您是否将
+                    <br>
+                    <span>1GB</span> 全国流量
+                    <br> 转赠到手机号码
+                    <br>
+                    <span>15910943650 </span>
+                    <br>账户中
+                </p>
+                <p> （点击确认后，信息将不可更改）</p>
+            </div>
+            <div>
+                <span>更改</span>
+                <span>确定</span>
+            </div>
+        </section>
+        <!-- 异网弹窗4 -->
+        <section class="pop pop_yif">
+            <div>
+                <div>
+                    <p>
+                        您已将
+                        <br>
+                        <span>500MB</span>全国流量
+                        <br> 转赠到手机号码
+                        <br>
+                        <span>15910943650</span>账户中
+                    </p>
+                    <p>流量将于15日内到账
+                        <br> 有效期：7天
+                        <br>（流量到账后，立即生效）
+                    </p>
+                </div>
+                <a href="javascript:void(0);"></a>
+            </div>
+            <div class="close">确定</div>
+        </section>
+        <!-- 点击大小礼包 -->
+        <section class="pop libao">
+            <div>
+                <p>您还没有答对
+                    <br>
+                    <span class="timu_number">6道及6道以上</span>的地标问题
+                    <br> 还不能抽奖哦~ </p>
+                <p>快来邀请小伙伴一起参加
+                    <br> 解锁后可以重新答题啦
+                </p>
+            </div>
+            <div class="close">发送好友</div>
+        </section>
+        <!-- 明信片 -->
+        <section class="pop pop_post">
+            <div>
+                <img src="./images/postcard_01.png" alt="">
+            </div>
+            <div class="post_cards"></div>
+        </section>
+        <!-- 分享 -->
+        <section class="pop share">
+            <div class="share_hide">
+                <div></div>
+            </div>
+        </section>
+        <!-- 活动规则 -->
+        <section class="pop pop_rule">
+            <div>
+                <ul>
+                    <li>
+                        <span> 一 活动时间：</span>
+                        <br> 即日起——4月8日
+                    </li>
+                    <li>
+                        <span>二 活动介绍：</span>
+                        <br> 活动期间，用户通过北京移动微信公众号，可参与“踏青游北京”活动。每个用户初始有一次免费答题的机会，将活动分享给好友，即可解锁无限答题机会。活动中共有 9道关于北京著名景点的测试题。用户答对6道题及6道题以上，可获得一次抽奖机会；答对9道题，可获得二次抽奖机会。每个用户最多可参与两次抽奖。
+                        北京移动用户抽中流量奖品后，自动充入关注绑定账户。 非北京移动用户抽中流量奖品后可以转赠给北京移动手机号码。
+                    </li>
+                    <li>
+                        <span>三 奖品规则：</span>
+                        <br> 活动奖品包含： 200MB、500MB、1GB、2GB、5GB全国流量，及部分免费业务体验资格、优惠业务办理资格。
+                        <br> （一）流量奖品
+                        <br> 1. 流量档位包括200MB、500MB、1GB、2GB、5GB全国流量；
+                        <br> 2. 奖品将于领取后15日内，自动充入用户的微信关注绑定手机号，流量自充入日起生效，有效期7天；
+                        <br> 3. 获赠流量使用优先级高于主套餐、可选包及部分定向流量包，赠送流量无法共享，不可结转；
+                        <br> 4. 处于保留期、保号期、挂失、申停、欠停、转品牌过渡期的手机号；物联网卡、4G超级日租卡套餐、神州行开心听、语音套餐卡、神州行B标准资费基本策划等特殊资费用户无法领取赠送流量；
+                        <br> 5. 赠送流量每月仅可领取100次，超出上限不可领取。
+                        <br>
+
+                    </li>
+                    <li>
+                        （二）其它奖品
+                        <br> 规则详见各奖品办理页面
+
+                    </li>
+                    <li>温馨提示：活动将于4月8日结束，请您务必于活动结束前完成领奖，逾期视为自动放弃奖品。</li>
+                </ul>
+            </div>
+            <div class="ru_close"></div>
+        </section>
+        <!-- 关注 -->
+        <section class="pop pop_attention">
+            <div class="attention">
+                <p>亲爱的用户
+                    <br/> 小伙伴们踏青活动开始啦！
+                    <br> 看看你对北京的了解程度
+                    <br> 答完题还有好礼等着你哦~
+                </p>
+                <p></p>
+                <p>长按图片，识别图中二维码-关注公众号在【优惠】菜单中可参加优惠哦</p>
+            </div>
+        </section>
+        <!-- 遮罩层 -->
+        <div class="cover"></div>
+        <script>
+
+        </script>
+    </body>
+
+</html>
